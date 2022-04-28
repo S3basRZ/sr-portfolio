@@ -11,22 +11,33 @@
     flex-direction: column;
     align-items: flex-start;
     background: $c-bgmenu;
-    height: max-content;
+    height: 60vh;
     max-width: 1200px;
     margin: 0px auto 120px;
     padding: 15px;
     border-radius: 15px;
 
     h2 {
-      font-size: $fs-xxl;
-      color: $c-amarillo;
-      font-family: map-get($font, 'font2');
+      @include titulo();
     }
 
     .sobremi-resumen {
+      padding-bottom: 100px;
       p {
         font-size: $fs-md;
         max-width: 800px;
+      }
+    }
+    .cnt-img {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 800px;
+      width: 100%;
+      justify-content: space-evenly;
+      align-items: center;
+      img {
+        width: 100px;
+        height: 100px;
       }
     }
   }

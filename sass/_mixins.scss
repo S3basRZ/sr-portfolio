@@ -41,3 +41,12 @@
     border: 1px solid $c-verde;
   }
 }
+
+// TITULOS
+
+@mixin titulo() {
+  font-size: $fs-xxl;
+  color: $c-amarillo;
+  font-family: map-get($font, 'font2');
+  padding-bottom: 50px;
+}
