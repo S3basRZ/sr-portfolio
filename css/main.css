@@ -80,6 +80,10 @@ body {
   color: #3daa16;
 }
 @media screen and (max-width: 800px) {
+  .navbar .nav-container {
+    outline: 1px solid #f9c74f;
+    border-radius: 1em;
+  }
   .navbar .nav-container .nav-label {
     display: block;
     cursor: pointer;
@@ -127,7 +131,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.inicio .box {
+.inicio .cnt-inicio {
   padding-top: 5em;
   position: relative;
   width: 600px;
@@ -136,7 +140,13 @@ body {
   border-radius: 50%;
   overflow: hidden;
 }
-.inicio .box::before {
+@media screen and (max-width: 800px) {
+  .inicio .cnt-inicio {
+    width: 80vw;
+    height: 80vw;
+  }
+}
+.inicio .cnt-inicio::before {
   content: "";
   position: absolute;
   inset: -10px 140px;
@@ -145,10 +155,10 @@ body {
   -webkit-animation: animate 4s linear infinite;
           animation: animate 4s linear infinite;
 }
-.inicio .box:hover::before {
+.inicio .cnt-inicio:hover::before {
   inset: -20px 0px;
 }
-.inicio .box::after {
+.inicio .cnt-inicio::after {
   content: "";
   position: absolute;
   inset: 6px;
@@ -156,7 +166,7 @@ body {
   border-radius: 50%;
   z-index: 50;
 }
-.inicio .box .content {
+.inicio .cnt-inicio .content {
   position: absolute;
   inset: 30px;
   border: 6px solid #617c67;
@@ -168,7 +178,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.inicio .box .content img {
+.inicio .cnt-inicio .content img {
   position: absolute;
   top: 0;
   left: 0;
@@ -180,7 +190,7 @@ body {
   pointer-events: none;
   z-index: 100;
 }
-.inicio .box .content h2 {
+.inicio .cnt-inicio .content h2 {
   position: relative;
   font-family: "Chakra Petch";
   font-size: 4em;
@@ -188,11 +198,11 @@ body {
   color: #f9c74f;
   text-align: center;
 }
-.inicio .box .content h3 {
+.inicio .cnt-inicio .content h3 {
   font: 1rem;
   color: #cad2c5;
 }
-.inicio .box .content a {
+.inicio .cnt-inicio .content a {
   margin-top: 50px;
   font-size: 1.3rem;
   font-weight: 600;
@@ -202,10 +212,10 @@ body {
   color: #2f3e46;
   border-radius: 5px;
 }
-.inicio .box .content a:hover {
+.inicio .cnt-inicio .content a:hover {
   background: #3daa16;
 }
-.inicio .box:hover .content img {
+.inicio .cnt-inicio:hover .content img {
   opacity: 0;
   width: 700px;
   height: 700px;
@@ -229,7 +239,7 @@ body {
   }
 }
 @media screen and (max-width: 800px) {
-  .box {
+  .cnt-inicio {
     width: 400px;
     height: 400px;
   }

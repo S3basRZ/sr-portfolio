@@ -13,7 +13,6 @@
 
   .nav-container {
     @include flex(row, nowrap, space-between, center);
-    // outline: 1px ridge $c-amarillo;
     border-radius: 0.5em;
     margin: 0 auto;
     padding: 0 30px;
@@ -64,6 +63,9 @@
       }
     }
     @media screen and (max-width: 800px) {
+      outline: 1px solid $c-amarillo;
+      border-radius: 1em;
+
       .nav-label {
         display: block;
         cursor: pointer;
