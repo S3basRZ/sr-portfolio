@@ -1,0 +1,33 @@
+/* SOBRE MI */
+.sobremi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  .cnt-sobremi {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: $c-bgmenu;
+    height: max-content;
+    max-width: 1200px;
+    margin: 0px auto 120px;
+    padding: 15px;
+    border-radius: 15px;
+
+    h2 {
+      font-size: $fs-xxl;
+      color: $c-amarillo;
+      font-family: map-get($font, 'font2');
+    }
+
+    .sobremi-resumen {
+      p {
+        font-size: $fs-md;
+        max-width: 800px;
+      }
+    }
+  }
+}
