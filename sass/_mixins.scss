@@ -1,0 +1,43 @@
+@use 'variables' as *;
+
+// FLEXBOX
+
+@mixin flex($flow, $wrap, $justify, $align) {
+  display: flex;
+  flex-flow: $flow $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// RESPONSIVE
+
+@mixin resp($medida: 800px) {
+  @media screen and (max-width: $medida) {
+    @content;
+  }
+}
+
+//  BOTONES
+
+@mixin btn() {
+  padding: 5px 10px;
+  text-decoration: none;
+  background: $c-amarillo;
+  color: $c-bg;
+  border-radius: 5px;
+  &:hover {
+    background: $c-verde;
+  }
+}
+
+@mixin btn2() {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: $c-bgmenu;
+  border: 1px solid $c-bgmenu;
+  border-radius: 5px;
+  &:hover {
+    color: $c-verde;
+    border: 1px solid $c-verde;
+  }
+}

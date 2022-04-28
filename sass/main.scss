@@ -1,0 +1,22 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+//* NORMALIZACIÓN DE BROWSER /////////////////////
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5em;
+}
+
+body {
+  font-family: map-get($font, 'font1');
+  color: $c-blanco;
+  background: $c-bg;
+  font-size: 16px;
+}
+
+//* ELEMENTOS DE LA PAGINA //////////////////////
+@import 'pages/navbar';
+@import 'pages/inicio';

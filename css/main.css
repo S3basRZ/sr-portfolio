@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@200;300;400;500;600;700;900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5em;
+}
+
+body {
+  font-family: "Outfit";
+  color: #cad2c5;
+  background: #2f3e46;
+  font-size: 16px;
+}
+
+/* NAVBAR */
+.navbar {
+  z-index: 100;
+  margin-top: 3px;
+  position: fixed;
+  left: 1%;
+  width: 98%;
+  background: #2f3e46;
+  height: 80px;
+  font-family: "Chakra Petch";
+}
+.navbar .nav-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5em;
+  margin: 0 auto;
+  padding: 0 30px;
+  height: 100%;
+  width: 1200px;
+}
+.navbar .nav-container .nav-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f9c74f;
+}
+.navbar .nav-container .nav-label,
+.navbar .nav-container .nav-input {
+  display: none;
+}
+.navbar .nav-container .nav-menu {
+  font-size: 1rem;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 3.5em;
+}
+.navbar .nav-container .nav-menu .nav-item {
+  color: #cad2c5;
+  text-decoration: none;
+  text-transform: uppercase;
+  --clip: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+}
+.navbar .nav-container .nav-menu .nav-item b {
+  color: #f9c74f;
+}
+.navbar .nav-container .nav-menu .nav-item::after {
+  content: "";
+  display: block;
+  background: #3daa16;
+  width: 100%;
+  margin-top: 3px;
+  height: 3px;
+  -webkit-clip-path: var(--clip);
+          clip-path: var(--clip);
+  transition: -webkit-clip-path 0.5s ease-in-out;
+  transition: clip-path 0.5s ease-in-out;
+  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;
+}
+.navbar .nav-container .nav-menu .nav-item:hover {
+  --clip: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+}
+.navbar .nav-container .nav-menu .nav-item:hover b {
+  color: #3daa16;
+}
+@media screen and (max-width: 800px) {
+  .navbar .nav-container .nav-label {
+    display: block;
+    cursor: pointer;
+  }
+  .navbar .nav-container .nav-label .nav-icon {
+    height: 40px;
+    width: 40px;
+  }
+  .navbar .nav-container .nav-menu {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #2f3e46;
+    background: #617c67;
+    border-radius: 0.3em;
+    position: fixed;
+    top: 90px;
+    bottom: 1%;
+    width: 98%;
+    left: 1%;
+    font-size: 2rem;
+    gap: 1em;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: -webkit-clip-path 0.5s;
+    transition: clip-path 0.5s;
+    transition: clip-path 0.5s, -webkit-clip-path 0.5s;
+  }
+  .navbar .nav-container .nav-input:checked + .nav-menu {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .navbar .nav-container .nav-input:checked + .nav-menu::after {
+    background: #3daa16;
+  }
+}
+
+/* INICIO */
+.inicio {
+  margin: 0px auto 120px;
+  max-width: 1200px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inicio .box {
+  padding-top: 5em;
+  position: relative;
+  width: 600px;
+  height: 600px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.inicio .box::before {
+  content: "";
+  position: absolute;
+  inset: -10px 140px;
+  background: linear-gradient(315deg, #3daa16, #f9c74f);
+  transition: 0.5s;
+  -webkit-animation: animate 4s linear infinite;
+          animation: animate 4s linear infinite;
+}
+.inicio .box:hover::before {
+  inset: -20px 0px;
+}
+.inicio .box::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  background: #2f3e46;
+  border-radius: 50%;
+  z-index: 50;
+}
+.inicio .box .content {
+  position: absolute;
+  inset: 30px;
+  border: 6px solid #617c67;
+  z-index: 75;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.inicio .box .content img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 100;
+}
+.inicio .box .content h2 {
+  position: relative;
+  font-family: "Chakra Petch";
+  font-size: 4em;
+  font-weight: 600;
+  color: #f9c74f;
+  text-align: center;
+}
+.inicio .box .content h3 {
+  font: 1rem;
+  color: #cad2c5;
+}
+.inicio .box .content a {
+  margin-top: 50px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  text-decoration: none;
+  background: #f9c74f;
+  color: #2f3e46;
+  border-radius: 5px;
+}
+.inicio .box .content a:hover {
+  background: #3daa16;
+}
+.inicio .box:hover .content img {
+  opacity: 0;
+  width: 700px;
+  height: 700px;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 800px) {
+  .box {
+    width: 400px;
+    height: 400px;
+  }
+}/*# sourceMappingURL=main.css.map */

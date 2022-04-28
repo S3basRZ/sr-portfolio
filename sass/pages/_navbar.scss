@@ -1,0 +1,98 @@
+/* NAVBAR */
+
+.navbar {
+  z-index: 100;
+  margin-top: 3px;
+  position: fixed;
+
+  left: 1%;
+  width: 98%;
+  background: $c-bg;
+  height: 80px;
+  font-family: map-get($font, 'fontlogo');
+
+  .nav-container {
+    @include flex(row, nowrap, space-between, center);
+    // outline: 1px ridge $c-amarillo;
+    border-radius: 0.5em;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 100%;
+    width: 1200px;
+
+    .nav-logo {
+      font-size: $fs-xl;
+      font-weight: $fw-7;
+      color: $c-amarillo;
+    }
+
+    .nav-label,
+    .nav-input {
+      display: none;
+    }
+
+    .nav-menu {
+      font-size: $fs-sm;
+      display: grid;
+      grid-auto-flow: column;
+      gap: 3.5em;
+
+      .nav-item {
+        color: $c-blanco;
+        text-decoration: none;
+        text-transform: uppercase;
+        --clip: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+        b {
+          color: $c-amarillo;
+        }
+        &::after {
+          content: '';
+          display: block;
+          background: $c-verde;
+          width: 100%;
+          margin-top: 3px;
+          height: 3px;
+          clip-path: var(--clip);
+          transition: clip-path 0.5s ease-in-out;
+        }
+        &:hover {
+          --clip: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+          b {
+            color: $c-verde;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 800px) {
+      .nav-label {
+        display: block;
+        cursor: pointer;
+        .nav-icon {
+          height: 40px;
+          width: 40px;
+        }
+      }
+      .nav-menu {
+        @include flex(column, nowrap, space-evenly, center);
+        color: $c-bg;
+        background: $c-bgmenu;
+        border-radius: 0.3em;
+        position: fixed;
+        top: 90px;
+        bottom: 1%;
+        width: 98%;
+        left: 1%;
+        font-size: $fs-xl;
+        gap: 1em;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path 0.5s;
+      }
+      .nav-input:checked + .nav-menu {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        &::after {
+          background: $c-verde;
+        }
+      }
+    }
+  }
+}
