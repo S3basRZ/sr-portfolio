@@ -1,43 +1,34 @@
 /* SOBRE MI */
+
 .sobremi {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-
   .cnt-sobremi {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background: $c-bgmenu;
-    height: 60vh;
-    max-width: 1200px;
-    margin: 0px auto 120px;
+    max-width: min(90vw, 1200px);
+    margin: 0 auto;
     padding: 15px;
-    border-radius: 15px;
-
-    h2 {
-      @include titulo();
-    }
-
+    border-radius: 5px;
+    background: $c-bgmenu;
+    height: auto;
+    font-family: map-get($font, 'font2');
+    display: flex;
+    flex-wrap: wrap;
     .sobremi-resumen {
-      padding-bottom: 100px;
+      min-width: 280px;
+      max-width: 80%;
+      h2 {
+        @include titulo();
+      }
       p {
-        font-size: $fs-md;
-        max-width: 800px;
+        font-weight: $fw-6;
       }
     }
     .cnt-img {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 800px;
-      width: 100%;
-      justify-content: space-evenly;
-      align-items: center;
+      margin: 30px auto;
+      min-width: 90%;
+      @include flex(row, wrap, space-evenly, none);
       img {
-        width: 100px;
-        height: 100px;
+        min-width: max(60px, 5vw);
       }
     }
   }

@@ -27,15 +27,71 @@
     <header>
       <nav class="navbar">
         <div class="nav-container">
-          <!-- Logo -->
-          <h1 class="nav-logo">&ltSR/&gt</h1>
-          <!-- Icono de menu -->
+          <a href="#inicio"><h1 class="nav-logo">&ltSR/&gt</h1></a>
           <label for="menu" class="nav-label">
-            <img src="libs/menu.svg" alt="menu" class="nav-icon" />
+            <svg
+              class="nav-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="48"
+              height="48"
+              viewBox="0 0 172 172"
+              style="fill: #000000"
+            >
+              <g transform="translate(2.924,2.924) scale(0.966,0.966)">
+                <g
+                  fill="none"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="none"
+                  stroke-linecap="butt"
+                  stroke-linejoin="none"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                >
+                  <g fill="#f9c74f" stroke="#f9c74f" stroke-width="6" stroke-linejoin="round">
+                    <path
+                      d="M21.5,78.83333h129v14.33333h-129zM21.5,35.83333h129v14.33333h-129zM21.5,121.83333h129v14.33333h-129z"
+                    ></path>
+                  </g>
+                  <path
+                    d="M0,172v-172h172v172z"
+                    fill="none"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linejoin="miter"
+                  ></path>
+                  <g fill="#f9c74f" stroke="none" stroke-width="1" stroke-linejoin="miter">
+                    <path
+                      d="M21.5,78.83333h129v14.33333h-129zM21.5,35.83333h129v14.33333h-129zM21.5,121.83333h129v14.33333h-129z"
+                    ></path>
+                  </g>
+                  <path
+                    d=""
+                    fill="none"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linejoin="miter"
+                  ></path>
+                  <path
+                    d=""
+                    fill="none"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linejoin="miter"
+                  ></path>
+                </g>
+              </g>
+            </svg>
           </label>
-          <!-- Input que reacciona al ::checkbox marcado en <label> anterior -->
           <input type="checkbox" id="menu" class="nav-input" />
-          <!-- Items del menu -->
           <div class="nav-menu">
             <a href="#inicio" class="nav-item"><b>{</b> Inicio <b>}</b></a>
             <a href="#sobremi" class="nav-item"><b>{</b> Sobre mi <b>}</b></a>
@@ -44,51 +100,45 @@
         </div>
       </nav>
     </header>
-    <!-- INICIO -->
+    <!-- INDEX -->
     <section class="inicio" id="inicio">
-      <div class="cnt-inicio">
-        <div class="content">
-          <img src="libs/foto.jpg" alt="foto" />
-          <h2>Sebastian Ruiz</h2>
-          <h3>Frontend Developer Jr</h3>
-          <a href="#contacto">Contacto</a>
+      <div class="bg-animation">
+        <div class="cnt-inicio">
+          <div class="content">
+            <img src="libs/foto2.jpg" alt="foto" />
+            <h2>Sebastian Ruiz</h2>
+            <h3>Frontend Developer Jr</h3>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- SOBRE MI -->
-    <section class="sobremi" id="sobremi">
-      <div class="cnt-sobremi">
-        <h2>Experiencia</h2>
-        <div class="sobremi-resumen">
-          <p>
-            Estoy dando mis primeros pasos como desarrollador, empezando con Front End, en vias de
-            convertirme en algún momento en un desarrollador Full Stack completo.
-          </p>
-          <p>
-            Es por esto que estoy en estudio constante de las nuevas tecnologías, asi como las
-            buenas practicas y los lenguajes mas utilizados en la actualidad
-          </p>
-        </div>
-        <div class="cnt-img">
-          <img src="libs/html.svg" alt="HTML" />
-          <img src="libs/css.svg" alt="CSS" />
-          <img src="libs/js.svg" alt="JS" />
-          <img src="libs/git.svg" alt="GIT" />
+    <section id="sobremi">
+      <div class="sobremi">
+        <div class="cnt-sobremi">
+          <div class="sobremi-resumen">
+            <h2>Sobre mi</h2>
+            <p>
+              Estoy dando mis primeros pasos en el desarrollo Frontend, con meta a ser un
+              Desarrollador Fullstack completo.
+            </p>
+            <p>
+              Muy curioso y me gusta hacer experimentos para incluir de mejor manera los
+              conocimientos que voy adquiriendo y con muchas ganas de ser mentor para que mas
+              personas puedan iniciar en el desarrollo de maneras mas practicas y efectivas.
+            </p>
+          </div>
+          <div class="cnt-img">
+            <img src="libs/html.svg" alt="HTML" />
+            <img src="libs/css.svg" alt="CSS" />
+            <img src="libs/js.svg" alt="JS" />
+            <img src="libs/git.svg" alt="GIT" />
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- JS BOOTSTRAP -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-      crossorigin="anonymous"
-    ></script>
+    <!-- CONTACTO -->
   </body>
 </html>

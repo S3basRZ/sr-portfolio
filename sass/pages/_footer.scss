@@ -1,0 +1,21 @@
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  .copyright {
+    p {
+      font-family: map-get($font, 'fontlogo');
+      font-size: $fs-sm;
+      color: $c-amarillo;
+    }
+  }
+  .redes {
+    .icono {
+      color: $c-blanco;
+      font-size: $fs-lg;
+      padding: 0 20px;
+    }
+  }
+}

@@ -36,6 +36,7 @@
   color: $c-bgmenu;
   border: 1px solid $c-bgmenu;
   border-radius: 5px;
+  background: $c-bg;
   &:hover {
     color: $c-verde;
     border: 1px solid $c-verde;
@@ -47,6 +48,7 @@
 @mixin titulo() {
   font-size: $fs-xxl;
   color: $c-amarillo;
-  font-family: map-get($font, 'font2');
-  padding-bottom: 50px;
+  font-family: map-get($font, 'fontlogo');
+  padding-bottom: 20px;
+  font-weight: $fw-6;
 }

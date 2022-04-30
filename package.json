@@ -1,6 +1,6 @@
 {
   "name": "sebastian-ruiz-portfolio",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "Proyecto CoderHouse",
   "main": "index.js",
   "scripts": {
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/S3basRZ/My-Portfolio.git"
+    "url": "git+https://github.com/S3basRZ/sr-portfolio.git"
   },
   "author": "Sebastian Ruiz",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/S3basRZ/My-Portfolio/issues"
+    "url": "https://github.com/S3basRZ/sr-portfolio/issues"
   },
-  "homepage": "https://github.com/S3basRZ/My-Portfolio#readme",
+  "homepage": "https://github.com/S3basRZ/sr-portfolio#readme",
   "devDependencies": {
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.15"

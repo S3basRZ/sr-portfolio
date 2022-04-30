@@ -4,14 +4,13 @@
   z-index: 100;
   margin-top: 3px;
   position: fixed;
-
   left: 1%;
   width: 98%;
-  background: $c-bg;
   height: 80px;
   font-family: map-get($font, 'fontlogo');
 
   .nav-container {
+    background: $c-bg;
     @include flex(row, nowrap, space-between, center);
     border-radius: 0.5em;
     margin: 0 auto;
@@ -19,10 +18,14 @@
     height: 100%;
     width: 1200px;
 
-    .nav-logo {
-      font-size: $fs-xl;
-      font-weight: $fw-7;
-      color: $c-amarillo;
+    a {
+      text-decoration: none;
+
+      .nav-logo {
+        font-size: $fs-xl;
+        font-weight: $fw-7;
+        color: $c-amarillo;
+      }
     }
 
     .nav-label,
@@ -63,8 +66,8 @@
       }
     }
     @media screen and (max-width: 800px) {
-      outline: 1px solid $c-amarillo;
-      border-radius: 1em;
+      outline: 1px solid $c-bgmenu;
+      border-radius: 7px;
 
       .nav-label {
         display: block;
@@ -75,17 +78,17 @@
         }
       }
       .nav-menu {
-        @include flex(column, nowrap, space-evenly, center);
+        @include flex(column, nowrap, center, center);
         color: $c-bg;
         background: $c-bgmenu;
-        border-radius: 0.3em;
+        border-radius: 7px;
         position: fixed;
         top: 90px;
         bottom: 1%;
         width: 98%;
         left: 1%;
         font-size: $fs-xl;
-        gap: 1em;
+        // gap: 0.2em;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: clip-path 0.5s;
       }
