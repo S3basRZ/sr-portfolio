@@ -63,13 +63,13 @@
         h2 {
           position: relative;
           font-family: map-get($font, 'fontlogo');
-          font-size: min(10vw, 5rem);
+          font-size: min(10vw, 4rem);
           font-weight: $fw-6;
           color: $c-amarillo;
           text-align: center;
         }
         h3 {
-          font: $fs-sm;
+          font-size: min(6vw, 2.5rem);
           color: $c-blanco;
           font-family: map-get($font, 'font2');
         }

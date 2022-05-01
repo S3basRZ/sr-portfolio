@@ -22,9 +22,10 @@
       text-decoration: none;
 
       .nav-logo {
-        font-size: $fs-xl;
+        font-size: min(10vw, 2rem);
         font-weight: $fw-7;
         color: $c-amarillo;
+        line-height: 0.3;
       }
     }
 
@@ -34,7 +35,7 @@
     }
 
     .nav-menu {
-      font-size: $fs-sm;
+      font-size: max(1vw, 1.5rem);
       display: grid;
       grid-auto-flow: column;
       gap: 3.5em;
@@ -50,7 +51,7 @@
         &::after {
           content: '';
           display: block;
-          background: $c-verde;
+          background: $c-amarillo;
           width: 100%;
           margin-top: 3px;
           height: 3px;
@@ -60,13 +61,13 @@
         &:hover {
           --clip: polygon(100% 0, 0 0, 0 100%, 100% 100%);
           b {
-            color: $c-verde;
+            color: $c-amarillo;
           }
         }
       }
     }
     @media screen and (max-width: 800px) {
-      outline: 1px solid $c-bgmenu;
+      outline: 1px solid $c-bg2;
       border-radius: 7px;
 
       .nav-label {
@@ -80,23 +81,19 @@
       .nav-menu {
         @include flex(column, nowrap, center, center);
         color: $c-bg;
-        background: $c-bgmenu;
+        background: $c-bg2;
         border-radius: 7px;
         position: fixed;
         top: 90px;
         bottom: 1%;
         width: 98%;
         left: 1%;
-        font-size: $fs-xl;
-        // gap: 0.2em;
+        font-size: 2.5rem;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: clip-path 0.5s;
       }
       .nav-input:checked + .nav-menu {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        &::after {
-          background: $c-verde;
-        }
       }
     }
   }

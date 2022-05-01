@@ -8,9 +8,9 @@
 }
 
 body {
-  font-family: "Outfit";
+  font-family: "Source Code Pro";
   color: #cad2c5;
-  background: #2f3e46;
+  background: #2b2c2a;
   font-size: 16px;
 }
 
@@ -25,7 +25,7 @@ body {
   font-family: "Chakra Petch";
 }
 .navbar .nav-container {
-  background: #2f3e46;
+  background: #2b2c2a;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -40,16 +40,17 @@ body {
   text-decoration: none;
 }
 .navbar .nav-container a .nav-logo {
-  font-size: 2rem;
+  font-size: min(10vw, 2rem);
   font-weight: 700;
   color: #f9c74f;
+  line-height: 0.3;
 }
 .navbar .nav-container .nav-label,
 .navbar .nav-container .nav-input {
   display: none;
 }
 .navbar .nav-container .nav-menu {
-  font-size: 1rem;
+  font-size: max(1vw, 1.5rem);
   display: grid;
   grid-auto-flow: column;
   gap: 3.5em;
@@ -66,7 +67,7 @@ body {
 .navbar .nav-container .nav-menu .nav-item::after {
   content: "";
   display: block;
-  background: #3daa16;
+  background: #f9c74f;
   width: 100%;
   margin-top: 3px;
   height: 3px;
@@ -80,11 +81,11 @@ body {
   --clip: polygon(100% 0, 0 0, 0 100%, 100% 100%);
 }
 .navbar .nav-container .nav-menu .nav-item:hover b {
-  color: #3daa16;
+  color: #f9c74f;
 }
 @media screen and (max-width: 800px) {
   .navbar .nav-container {
-    outline: 1px solid #617c67;
+    outline: 1px solid #656e5d;
     border-radius: 7px;
   }
   .navbar .nav-container .nav-label {
@@ -100,15 +101,15 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    color: #2f3e46;
-    background: #617c67;
+    color: #2b2c2a;
+    background: #656e5d;
     border-radius: 7px;
     position: fixed;
     top: 90px;
     bottom: 1%;
     width: 98%;
     left: 1%;
-    font-size: 2rem;
+    font-size: 2.5rem;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: -webkit-clip-path 0.5s;
@@ -118,9 +119,6 @@ body {
   .navbar .nav-container .nav-input:checked + .nav-menu {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  .navbar .nav-container .nav-input:checked + .nav-menu::after {
-    background: #3daa16;
   }
 }
 
@@ -154,7 +152,7 @@ body {
   content: "";
   position: absolute;
   inset: 5px;
-  background: #2f3e46;
+  background: #2b2c2a;
   border-radius: 5px;
   z-index: 50;
 }
@@ -190,13 +188,13 @@ body {
 .inicio .bg-animation .cnt-inicio .content h2 {
   position: relative;
   font-family: "Chakra Petch";
-  font-size: min(10vw, 5rem);
+  font-size: min(10vw, 4rem);
   font-weight: 600;
   color: #f9c74f;
   text-align: center;
 }
 .inicio .bg-animation .cnt-inicio .content h3 {
-  font: 1rem;
+  font-size: min(6vw, 2.5rem);
   color: #cad2c5;
   font-family: "Source Code Pro";
 }
@@ -267,7 +265,7 @@ body {
   margin: 0 auto;
   padding: 15px;
   border-radius: 5px;
-  background: #617c67;
+  background: #656e5d;
   height: auto;
   font-family: "Source Code Pro";
   display: flex;
@@ -278,7 +276,7 @@ body {
   max-width: 80%;
 }
 .sobremi .cnt-sobremi .sobremi-resumen h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #f9c74f;
   font-family: "Chakra Petch";
   padding-bottom: 20px;
