@@ -46,7 +46,7 @@
 // TITULOS
 
 @mixin titulo() {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: $c-amarillo;
   font-family: map-get($font, 'fontlogo');
   padding-bottom: 20px;

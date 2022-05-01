@@ -16,7 +16,7 @@
     margin: 0 auto;
     padding: 0 30px;
     height: 100%;
-    width: 1200px;
+    width: min(95vw, 1200px);
 
     a {
       text-decoration: none;
@@ -79,18 +79,20 @@
         }
       }
       .nav-menu {
-        @include flex(column, nowrap, center, center);
+        @include flex(column, nowrap, space-evenly, center);
         color: $c-bg;
         background: $c-bg2;
         border-radius: 7px;
         position: fixed;
         top: 90px;
         bottom: 1%;
-        width: 98%;
-        left: 1%;
-        font-size: 2.5rem;
+        width: auto;
+        left: 2.5vw;
+        right: 2.5vw;
+        font-size: 1.5rem;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: clip-path 0.5s;
+        box-shadow: 5px 5px 100px;
       }
       .nav-input:checked + .nav-menu {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
