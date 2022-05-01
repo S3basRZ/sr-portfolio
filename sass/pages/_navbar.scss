@@ -2,43 +2,36 @@
 
 .navbar {
   z-index: 100;
-  margin-top: 3px;
   position: fixed;
-  left: 1%;
-  width: 98%;
+  width: 98vw;
   height: 80px;
   font-family: map-get($font, 'fontlogo');
 
   .nav-container {
     background: $c-bg;
     @include flex(row, nowrap, space-between, center);
-    border-radius: 0.5em;
+    border-radius: 5em;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 10px;
     height: 100%;
-    width: min(95vw, 1200px);
+    width: min(90vw, 1200px);
 
-    a {
-      text-decoration: none;
-
+    .nav-input {
+      display: none;
+    }
+    .nav-label {
       .nav-logo {
         font-size: min(10vw, 2rem);
         font-weight: $fw-7;
         color: $c-amarillo;
-        line-height: 0.3;
       }
     }
-
-    .nav-label,
-    .nav-input {
-      display: none;
-    }
-
     .nav-menu {
       font-size: max(1vw, 1.5rem);
       display: grid;
       grid-auto-flow: column;
-      gap: 3.5em;
+      gap: 1.5em;
+      padding: 10px;
 
       .nav-item {
         color: $c-blanco;
@@ -53,7 +46,6 @@
           display: block;
           background: $c-amarillo;
           width: 100%;
-          margin-top: 3px;
           height: 3px;
           clip-path: var(--clip);
           transition: clip-path 0.5s ease-in-out;
@@ -67,35 +59,34 @@
       }
     }
     @media screen and (max-width: 800px) {
-      outline: 1px solid $c-bg2;
-      border-radius: 7px;
+      background: none;
+      @include flex(column, nowrap, center, center);
 
       .nav-label {
-        display: block;
-        cursor: pointer;
-        .nav-icon {
-          height: 40px;
-          width: 40px;
-        }
+        border-radius: 5px;
+        padding: 0 10px;
+        background: $c-bg;
       }
+
       .nav-menu {
-        @include flex(column, nowrap, space-evenly, center);
-        color: $c-bg;
-        background: $c-bg2;
+        @include flex(column, nowrap, center, center);
+        color: $c-blanco;
+        background: $c-bg;
         border-radius: 7px;
+        border: 1px solid $c-bg2;
         position: fixed;
-        top: 90px;
-        bottom: 1%;
-        width: auto;
-        left: 2.5vw;
-        right: 2.5vw;
-        font-size: 1.5rem;
+        top: 70px;
+        gap: 0.5em;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: clip-path 0.5s;
-        box-shadow: 5px 5px 100px;
       }
+
       .nav-input:checked + .nav-menu {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      .nav-label {
+        cursor: pointer;
       }
     }
   }

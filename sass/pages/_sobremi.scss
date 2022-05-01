@@ -1,7 +1,7 @@
 /* SOBRE MI */
 
 .sobremi {
-  width: 100vw;
+  width: 98vw;
   height: 100vh;
   .cnt-sobremi {
     max-width: min(90vw, 1200px);
@@ -24,7 +24,7 @@
       }
     }
     .cnt-img {
-      margin: 30px auto;
+      margin: 0px auto;
       min-width: 90%;
       @include flex(row, wrap, space-evenly, none);
       img {
