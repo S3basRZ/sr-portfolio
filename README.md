@@ -10,6 +10,10 @@ FIX:
 - Responsive no funcionaba correctamente
 - Formulario de contacto ahora reacciona a Responsive
 
+DISEÑO:
+
+- Se modifico navbar y pantalla principal para agregar indicadores para navegacion de pagina.
+
 ------ v. 1.0.9 ------
 
 Rediseño
