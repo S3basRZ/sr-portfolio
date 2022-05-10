@@ -46,6 +46,22 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        svg {
+          position: absolute;
+          z-index: 200;
+          bottom: 30px;
+          right: 30px;
+          border: 2px dashed $c-bg;
+          padding: 5px;
+          height: 40px;
+          width: 40px;
+          fill: $c-bg;
+          transition: border 0.3s, fill 0.3s;
+          &:hover {
+            border: 2px dashed $c-amarillo;
+            fill: $c-amarillo;
+          }
+        }
 
         img {
           position: absolute;
@@ -84,6 +100,12 @@
         }
       }
     }
+  }
+  .arrow {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    fill: $c-blanco;
   }
 }
 

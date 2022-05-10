@@ -12,10 +12,12 @@
     height: auto;
     font-family: map-get($font, 'font2');
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
     .sobremi-resumen {
       min-width: 280px;
-      max-width: 80%;
+      max-width: 95%;
       h2 {
         @include titulo();
       }
@@ -24,6 +26,7 @@
       }
     }
     .cnt-img {
+      padding: 30px 0;
       margin: 0px auto;
       min-width: 90%;
       @include flex(row, wrap, space-evenly, none);

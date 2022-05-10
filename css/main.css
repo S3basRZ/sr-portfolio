@@ -20,6 +20,7 @@ body {
   position: fixed;
   width: 98vw;
   height: 80px;
+  margin: 0 auto;
   font-family: "Chakra Petch";
 }
 .navbar .nav-container {
@@ -28,26 +29,28 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  border-radius: 5em;
+  border: 1px solid #656e5d;
+  border-radius: 7px;
   margin: 0 auto;
   padding: 0 10px;
   height: 100%;
   width: min(90vw, 1200px);
 }
-.navbar .nav-container .nav-input {
-  display: none;
-}
-.navbar .nav-container .nav-label .nav-logo {
+.navbar .nav-container .nav-logo {
   font-size: min(10vw, 2rem);
   font-weight: 700;
   color: #f9c74f;
+  text-decoration: none;
+}
+.navbar .nav-container .nav-input,
+.navbar .nav-container svg {
+  display: none;
 }
 .navbar .nav-container .nav-menu {
   font-size: max(1vw, 1.5rem);
   display: grid;
   grid-auto-flow: column;
-  gap: 1.5em;
-  padding: 10px;
+  gap: 2em;
 }
 .navbar .nav-container .nav-menu .nav-item {
   color: #cad2c5;
@@ -78,28 +81,36 @@ body {
 }
 @media screen and (max-width: 800px) {
   .navbar .nav-container {
-    background: none;
+    background: #2b2c2a;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
     align-items: center;
   }
+  .navbar .nav-container svg {
+    display: inline-block;
+    fill: #f9c74f;
+  }
   .navbar .nav-container .nav-label {
+    display: block;
     border-radius: 5px;
     padding: 0 10px;
     background: #2b2c2a;
   }
   .navbar .nav-container .nav-menu {
+    justify-content: center;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     color: #cad2c5;
     background: #2b2c2a;
     border-radius: 7px;
     border: 1px solid #656e5d;
     position: fixed;
-    top: 70px;
+    width: 90vw;
+    height: 80vh;
+    top: 80px;
     gap: 0.5em;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -166,6 +177,22 @@ body {
   align-items: center;
   flex-direction: column;
 }
+.inicio .bg-animation .cnt-inicio .content svg {
+  position: absolute;
+  z-index: 200;
+  bottom: 30px;
+  right: 30px;
+  border: 2px dashed #2b2c2a;
+  padding: 5px;
+  height: 40px;
+  width: 40px;
+  fill: #2b2c2a;
+  transition: border 0.3s, fill 0.3s;
+}
+.inicio .bg-animation .cnt-inicio .content svg:hover {
+  border: 2px dashed #f9c74f;
+  fill: #f9c74f;
+}
 .inicio .bg-animation .cnt-inicio .content img {
   position: absolute;
   top: 0;
@@ -201,6 +228,12 @@ body {
     width: 800px;
     height: 800px;
   }
+}
+.inicio .arrow {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  fill: #cad2c5;
 }
 
 @-webkit-keyframes animate {
@@ -262,11 +295,13 @@ body {
   height: auto;
   font-family: "Source Code Pro";
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
 }
 .sobremi .cnt-sobremi .sobremi-resumen {
   min-width: 280px;
-  max-width: 80%;
+  max-width: 95%;
 }
 .sobremi .cnt-sobremi .sobremi-resumen h2 {
   font-size: 2.5rem;
@@ -279,6 +314,7 @@ body {
   font-weight: 600;
 }
 .sobremi .cnt-sobremi .cnt-img {
+  padding: 30px 0;
   margin: 0px auto;
   min-width: 90%;
   display: flex;
