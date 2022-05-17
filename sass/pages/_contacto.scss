@@ -1,1 +1,190 @@
 /* CONTACTO */
+.contacto {
+  width: 98vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vh;
+
+  // FORMULARIO
+
+  .contacto-ctn {
+    width: 1200px;
+    min-width: 280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 10px 10px 40px;
+    border-radius: 5px;
+    background: $c-bg2;
+    height: auto;
+    font-family: map-get($font, 'font2');
+    display: grid;
+    grid:
+      'titulo titulo' 100px
+      'form social' 1fr
+      / 1fr 1fr;
+    gap: 30px;
+
+    h2 {
+      grid-area: titulo;
+      @include titulo();
+      padding-left: 15px;
+    }
+    .form-wts {
+      grid-area: form;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 0 5vw;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        div {
+          padding-bottom: 20px;
+          width: 100%;
+
+          label {
+            font-family: map-get($font, 'font2');
+            font-size: 1.2rem;
+            font-weight: $fw-6;
+          }
+          input[type='text'] {
+            font-family: map-get($font, 'font2');
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+            background-color: $c-bg;
+            color: $c-blanco;
+            &:focus {
+              outline: 1px solid $c-amarillo;
+            }
+          }
+          textarea {
+            font-family: map-get($font, 'font2');
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+            background-color: $c-bg;
+            color: $c-blanco;
+            &:focus {
+              outline: 1px solid $c-amarillo;
+            }
+          }
+        }
+        button {
+          font-family: map-get($font, 'font2');
+          font-size: 1rem;
+          font-weight: $fw-6;
+          width: 100%;
+          border: none;
+          padding: 10px;
+          background: $c-amarillo;
+          border-radius: 5px;
+          color: $c-bg;
+          cursor: pointer;
+          height: 50px;
+          align-items: center;
+          text-align: center;
+          &:hover {
+            outline: 1px solid $c-amarillo;
+            background: $c-bg2;
+            color: $c-blanco;
+          }
+        }
+      }
+    }
+
+    // REDES SOCIALES
+
+    .redes-sociales {
+      grid-area: social;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100%;
+      padding: 0 5vw;
+
+      div {
+        height: 100%;
+
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        a {
+          text-decoration: none;
+          margin: auto 0;
+          padding: 5px;
+          transition: all 0.3s;
+
+          img {
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+          }
+
+          p {
+            display: inline-block;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: $fw-6;
+            padding-left: 7px;
+            color: $c-blanco;
+          }
+
+          &:hover {
+            background: $c-amarillo;
+            padding: 5px;
+            border-radius: 7px;
+            img {
+              transform: scale(1.3) translateX(-60px);
+            }
+            p {
+              color: $c-bg;
+              font-weight: $fw-8;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 800px) {
+    margin-bottom: 10px;
+
+    .contacto-ctn {
+      display: flex;
+      flex-direction: column;
+
+      .redes-sociales {
+        margin-top: 45px;
+
+        div {
+          height: 100%;
+
+          display: flex;
+
+          a {
+            text-decoration: none;
+            margin: auto 0;
+            padding: 5px;
+
+            img {
+              display: inline-block;
+              height: 50px;
+              width: 50px;
+              padding: 5px;
+            }
+
+            p {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

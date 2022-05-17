@@ -120,5 +120,65 @@
     </section>
 
     <!-- CONTACTO -->
+    <section id="contacto">
+      <div class="contacto">
+        <div class="contacto-ctn">
+          <h2>Contactame!</h2>
+          <form id="form-wtsp" action="" class="form-wts">
+            <div>
+              <div>
+                <label>Nombre</label>
+                <input id="input-name" class="input-name" type="text"  required="" autocomplete="off">
+              </div>
+              <div>
+                <label>Mensaje</label>
+                <textarea id="input-msg" id="" cols="30" rows="7" class="input-msj" required=""></textarea>
+              </div>
+              
+              <button type="submit" id="send-btn" class="send-btn">Enviar Whatsapp</button type="submit">
+            </div>
+          </form>
+          <div class="redes-sociales">
+            <div>
+              <a href="https://twitter.com/devSebasRZ">
+                <img src="/libs/twitter.svg" alt="twitter">
+                <p>Twitter</p>
+              </a>
+              <a href="https://www.instagram.com/ruiz.sebaz/">
+                <img src="/libs/instagram-icon.svg" alt="instagram">
+                <p>Instagram</p>
+              </a>
+              <a href="https://github.com/S3basRZ">
+                <img src="/libs/github-icon.svg" alt="github">
+                <p>Github</p>
+              </a>
+              <a href="https://www.linkedin.com/in/ruizsebastian/">
+                <img src="/libs/linkedin-icon.svg" alt="linkedin">
+                <p>Linkedin</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JS de Whatsapp -->
+    <script>
+      var IconWhatsapp = document.querySelector('#icon-whatsapp');
+      var formulariowtsp = document.getElementById('form-wtsp');
+      var sendbttn = document.querySelector('#send-btn');
+    
+      sendbttn.addEventListener('click' , EnviarMensaje)
+
+      function EnviarMensaje(){
+
+        let name = document.querySelector('#input-name').value;
+        let mensaje = document.querySelector('#input-msg').value;
+      
+        let url = "https://api.whatsapp.com/send?phone=541166502152&text=Nombre: %0A" + name + "%0A%0AMensaje: %0A" + mensaje + "%0A";
+        window.open(url);
+
+      }
+    </script>
   </body>
 </html>

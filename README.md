@@ -1,3 +1,7 @@
+------ v2.0.2 ------
+
+- Detalles finales para entrega de proyecto
+
 ------ v2.0.1 ------
 NEW:
 
@@ -12,7 +16,7 @@ FIX:
 
 DISEÑO:
 
-- Se modifico navbar y pantalla principal para agregar indicadores para navegacion de pagina.
+- Se modifico navbar y pantalla principal para agregar indicadores para navegación de pagina.
 
 ------ v. 1.0.9 ------
 

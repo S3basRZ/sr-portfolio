@@ -17,32 +17,6 @@
   }
 }
 
-//  BOTONES
-
-@mixin btn() {
-  padding: 5px 10px;
-  text-decoration: none;
-  background: $c-amarillo;
-  color: $c-bg;
-  border-radius: 5px;
-  &:hover {
-    background: $c-verde;
-  }
-}
-
-@mixin btn2() {
-  padding: 5px 10px;
-  text-decoration: none;
-  color: $c-bgmenu;
-  border: 1px solid $c-bgmenu;
-  border-radius: 5px;
-  background: $c-bg;
-  &:hover {
-    color: $c-verde;
-    border: 1px solid $c-verde;
-  }
-}
-
 // TITULOS
 
 @mixin titulo() {

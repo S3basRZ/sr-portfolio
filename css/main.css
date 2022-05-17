@@ -284,7 +284,7 @@ body {
 /* SOBRE MI */
 .sobremi {
   width: 98vw;
-  height: 100vh;
+  padding-bottom: 20vh;
 }
 .sobremi .cnt-sobremi {
   max-width: min(90vw, 1200px);
@@ -326,4 +326,175 @@ body {
   min-width: max(60px, 5vw);
 }
 
-/* CONTACTO *//*# sourceMappingURL=main.css.map */
+/* CONTACTO */
+.contacto {
+  width: 98vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+.contacto .contacto-ctn {
+  width: 1200px;
+  min-width: 280px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 10px 10px 40px;
+  border-radius: 5px;
+  background: #656e5d;
+  height: auto;
+  font-family: "Source Code Pro";
+  display: grid;
+  grid: "titulo titulo" 100px "form social" 1fr/1fr 1fr;
+  gap: 30px;
+}
+.contacto .contacto-ctn h2 {
+  grid-area: titulo;
+  font-size: 2.5rem;
+  color: #f9c74f;
+  font-family: "Chakra Petch";
+  padding-bottom: 20px;
+  font-weight: 600;
+  padding-left: 15px;
+}
+.contacto .contacto-ctn .form-wts {
+  grid-area: form;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 5vw;
+}
+.contacto .contacto-ctn .form-wts div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contacto .contacto-ctn .form-wts div div {
+  padding-bottom: 20px;
+  width: 100%;
+}
+.contacto .contacto-ctn .form-wts div div label {
+  font-family: "Source Code Pro";
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.contacto .contacto-ctn .form-wts div div input[type=text] {
+  font-family: "Source Code Pro";
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  background-color: #2b2c2a;
+  color: #cad2c5;
+}
+.contacto .contacto-ctn .form-wts div div input[type=text]:focus {
+  outline: 1px solid #f9c74f;
+}
+.contacto .contacto-ctn .form-wts div div textarea {
+  font-family: "Source Code Pro";
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  background-color: #2b2c2a;
+  color: #cad2c5;
+}
+.contacto .contacto-ctn .form-wts div div textarea:focus {
+  outline: 1px solid #f9c74f;
+}
+.contacto .contacto-ctn .form-wts div button {
+  font-family: "Source Code Pro";
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  background: #f9c74f;
+  border-radius: 5px;
+  color: #2b2c2a;
+  cursor: pointer;
+  height: 50px;
+  align-items: center;
+  text-align: center;
+}
+.contacto .contacto-ctn .form-wts div button:hover {
+  outline: 1px solid #f9c74f;
+  background: #656e5d;
+  color: #cad2c5;
+}
+.contacto .contacto-ctn .redes-sociales {
+  grid-area: social;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  padding: 0 5vw;
+}
+.contacto .contacto-ctn .redes-sociales div {
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+.contacto .contacto-ctn .redes-sociales div a {
+  text-decoration: none;
+  margin: auto 0;
+  padding: 5px;
+  transition: all 0.3s;
+}
+.contacto .contacto-ctn .redes-sociales div a img {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+.contacto .contacto-ctn .redes-sociales div a p {
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  padding-left: 7px;
+  color: #cad2c5;
+}
+.contacto .contacto-ctn .redes-sociales div a:hover {
+  background: #f9c74f;
+  padding: 5px;
+  border-radius: 7px;
+}
+.contacto .contacto-ctn .redes-sociales div a:hover img {
+  transform: scale(1.3) translateX(-60px);
+}
+.contacto .contacto-ctn .redes-sociales div a:hover p {
+  color: #2b2c2a;
+  font-weight: 800;
+}
+@media screen and (max-width: 800px) {
+  .contacto {
+    margin-bottom: 10px;
+  }
+  .contacto .contacto-ctn {
+    display: flex;
+    flex-direction: column;
+  }
+  .contacto .contacto-ctn .redes-sociales {
+    margin-top: 45px;
+  }
+  .contacto .contacto-ctn .redes-sociales div {
+    height: 100%;
+    display: flex;
+  }
+  .contacto .contacto-ctn .redes-sociales div a {
+    text-decoration: none;
+    margin: auto 0;
+    padding: 5px;
+  }
+  .contacto .contacto-ctn .redes-sociales div a img {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+  }
+  .contacto .contacto-ctn .redes-sociales div a p {
+    display: none;
+  }
+}/*# sourceMappingURL=main.css.map */
